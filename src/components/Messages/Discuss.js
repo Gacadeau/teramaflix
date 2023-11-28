@@ -25,12 +25,14 @@ function Discuss({handlePopsms}) {
    }
    const fetchOtherSms = async() =>{
     const user = auto.session
-    const response = await fetch(`/api/dash/sms/${user.uniid}/${sms.length}/20`);
-    const data = await response.json();
-    setBody("")
-    if(data[0]) {
-      setSms(previousSms=>[...previousSms,...data])
+      const response = await fetch(`/api/dash/sms/${user.uniid}/${sms.length}/20`);
+      const data = await response.json();
+      setBody("")
+      if(data[0]) {
+        setSms(previousSms=>[...previousSms,...data])
+
     }
+   
   }
    useEffect(() => {
     // get sms detail in database

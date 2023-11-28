@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React,{useState,useEffect} from 'react'
 
 function Video({video}) {
-    const [imageBlobUrl, setImageBlobUrl] = useState('/img/thumb.jpg');
+  const [imageBlobUrl, setImageBlobUrl] = useState('/img/thumb.jpg');
   const [profBlobUrl, setProfBlobUrl] = useState('/img/logo.png');
   useEffect(() => {
     const fetchImage = async () => {
